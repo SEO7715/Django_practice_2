@@ -1,0 +1,27 @@
+{
+  "arch": "x86_64",
+  "build": "py38haa95532_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/win-64",
+  "constrains": [],
+  "depends": [
+    "certifi >=2016.9.26",
+    "python >=3.8,<3.9.0a0",
+    "wincertstore >=0.2"
+  ],
+  "features": "",
+  "fn": "setuptools-52.0.0-py38haa95532_0.conda",
+  "legacy_bz2_md5": "130858e6358597d96a4c74af51331b6c",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "532c30c6856a92c2dc9f297cf930cb75",
+  "name": "setuptools",
+  "platform": "win32",
+  "sha256": "ccb6feada2af66c55dd5e945fa43b4ce2cd61285dfd29387902138f55f86e0e9",
+  "size": 743109,
+  "subdir": "win-64",
+  "timestamp": 1611612544058,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/win-64/setuptools-52.0.0-py38haa95532_0.conda",
+  "version": "52.0.0"
+}

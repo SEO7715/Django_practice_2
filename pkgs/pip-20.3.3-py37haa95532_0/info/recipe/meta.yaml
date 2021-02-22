@@ -1,0 +1,60 @@
+# This file created by conda-build 3.20.5
+# meta.yaml template originally from:
+# C:\ci\containers\00000ad7l2j\tmp\build\80754af9\combined_recipe, last modified Tue Dec 15 12:38:36 2020
+# ------------------------------------------------
+
+package:
+    name: pip
+    version: 20.3.3
+source:
+    patches:
+        - 0001-Win32-Fix-Py_DEBUG-determination-in-_derive_abi-in-w.patch
+    sha256: 79c1ac8a9dccbec8752761cb5a2df833224263ca661477a2a9ed03ddf4e0e3ba
+    url: https://pypi.io/packages/source/p/pip/pip-20.3.3.tar.gz
+build:
+    disable_pip: true
+    entry_points:
+        - pip = pip._internal.cli.main:main
+        - pip3 = pip._internal.cli.main:main
+    number: '0'
+    string: py37haa95532_0
+requirements:
+    host:
+        - ca-certificates 2020.12.8 haa95532_0
+        - certifi 2020.12.5 py37haa95532_0
+        - openssl 1.1.1i h2bbff1b_0
+        - python 3.7.9 h60c2a47_0
+        - setuptools 51.0.0 py37haa95532_2
+        - sqlite 3.33.0 h2a8f88b_0
+        - vc 14.2 h21ff451_1
+        - vs2015_runtime 14.27.29016 h5e58377_2
+        - wincertstore 0.2 py37_0
+        - zlib 1.2.11 h62dcd97_4
+    run:
+        - python >=3.7,<3.8.0a0
+        - setuptools
+        - wheel
+test:
+    commands:
+        - pip -h
+        - pip list
+    imports:
+        - pip
+about:
+    dev_url: https://github.com/pypa/pip
+    doc_url: https://pip.pypa.io/en/stable/
+    home: https://pip.pypa.io/en/stable/
+    license: MIT
+    license_family: MIT
+    license_file: LICENSE.txt
+    summary: PyPA recommended tool for installing Python packages
+extra:
+    copy_test_source_files: true
+    final: true
+    recipe-maintainers:
+        - jakirkham
+        - jjhelmus
+        - mingwandroid
+        - msarahan
+        - ocefpaf
+        - pelson
