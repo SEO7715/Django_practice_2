@@ -11,6 +11,6 @@ def signup(request):
             return redirect("/")
     else:
         form = SignupForm()
-    return render(request, '', 'accounts/signup_form.html', {
+    return render(request, 'accounts/signup_form.html', {
         'form': form,
     })
