@@ -28,6 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+ADMINS = [
+    ('SEOJEONG PARK', 'plant00park21@gmail.com').
+]
+
 
 # Application definition
 
@@ -145,3 +149,5 @@ EMAIL_HOST_USER = 'apikey'
 EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+WELCOME_EMAIL_SENDER = "plant00park21@gmail.com"
