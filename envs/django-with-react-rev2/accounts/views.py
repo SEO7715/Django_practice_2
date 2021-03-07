@@ -36,7 +36,7 @@ def signup(request):
 @login_required
 def profile_edit(request):
     if request.method == 'POST':
-        form = ProfileForm(request, POST, request.FILES, instance=request.user)
+        form = ProfileForm(request.POST, request.FILES, instance=request.user)
         if form.is_valid():
             form.save()
             messages.success(request, "프로필을 수정/저장했습니다.")
@@ -49,7 +49,7 @@ def profile_edit(request):
 
 class PasswordChangeView(LoginRequiredMixin, AuthPasswordChangeView):
     success_url = reverse_lazy("password_change")
-    template_name = 'accounts/registration/password_change_form.html'
+    template_name = 'accounts/password_change_form.html'
     form_class = PasswordChangeForm
 
     def form_valid(self, form):
