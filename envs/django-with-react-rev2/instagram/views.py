@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .forms import PostForm
+from .models import Tag
 
 @login_required
 def post_new(request):
@@ -11,6 +12,7 @@ def post_new(request):
             post = form.save(commit=False)
             post.author = request.user
             post.save()
+            post.tag_set.add(*post.extract_tag_list())
             messages.success(request, "포스팅을 저장하였습니다!")
             return redirect("/")
     else:
