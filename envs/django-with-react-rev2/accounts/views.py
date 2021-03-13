@@ -62,7 +62,7 @@ password_change = PasswordChangeView.as_view()
 def user_follow(request, username):
     follow_user = get_object_or_404(User, username=username, is_active=True)
     request.user.following_set.add(follow_user)
-    follow_user.following_set.add(request.user)
+    follow_user.follower_set.add(request.user)
     messages.success(request, f"{follow_user}님을 팔로우했습니다.")
     redirect_url = request.META.get("HTTP_REFERER", "root")
     return redirect(redirect_url)
