@@ -12,3 +12,6 @@ https://repo.anaconda.com/pkgs/main/win-64/setuptools-52.0.0-py38haa95532_0.cond
 https://repo.anaconda.com/pkgs/main/win-64/pip-21.0.1-py38haa95532_0.conda
 https://repo.anaconda.com/pkgs/main/win-64/openssl-1.1.1j-h2bbff1b_0.conda
 https://repo.anaconda.com/pkgs/main/win-64/certifi-2020.12.5-py38haa95532_0.conda
+https://repo.anaconda.com/pkgs/main/win-64/ca-certificates-2021.1.19-haa95532_1.conda
+https://repo.anaconda.com/pkgs/main/win-64/python-3.8.8-hdbf39b2_4.conda
+https://repo.anaconda.com/pkgs/main/win-64/sqlite-3.35.1-h2bbff1b_0.conda

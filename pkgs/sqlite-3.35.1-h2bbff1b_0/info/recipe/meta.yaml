@@ -1,0 +1,63 @@
+# This file created by conda-build 3.21.4
+# meta.yaml template originally from:
+# C:\ci\containers\0000064sg87\tmp\build\80754af9\combined_recipe, last modified Mon Mar 15 14:03:40 2021
+# ------------------------------------------------
+
+package:
+  name: sqlite
+  version: 3.35.1
+source:
+  patches:
+    - expose_symbols.patch
+  sha256: dce5616c059084887ccf64739e368c161c49c64e7a7e43a47c2940d22d29560f
+  url: https://www.sqlite.org/2021/sqlite-autoconf-3350100.tar.gz
+build:
+  ignore_run_exports:
+    - ncurses
+  number: '0'
+  run_exports:
+    - sqlite >=3.35.1,<4.0a0
+  string: h2bbff1b_0
+requirements:
+  build:
+    - vs2017_win-64 19.16.27032.1 hb4161e2_3
+    - vswhere 2.7.1 h21ff451_0
+  host:
+    - vc 14.2 h21ff451_1
+    - vs2015_runtime 14.27.29016 h5e58377_2
+  run:
+    - vc >=14.1,<15.0a0
+    - vs2015_runtime >=14.16.27012,<15.0a0
+test:
+  commands:
+    - sqlite3 --version
+    - if not exist %PREFIX%\\Library\bin\sqlite3.dll exit 1
+    - if not exist %PREFIX%\\Library\lib\sqlite3.lib exit 1
+    - if not exist %PREFIX%\\Library\include\sqlite3.h exit 1
+    - if not exist %PREFIX%\\Library\include\sqlite3ext.h exit 1
+about:
+  description: 'SQLite is a self-contained, high-reliability, embedded, full-featured,
+
+    public-domain, SQL database engine.It is the most used database engine
+
+    in the world.
+
+    '
+  dev_url: https://github.com/mackyle/sqlite
+  doc_source_url: https://github.com/mackyle/sqlite/tree/master/doc
+  doc_url: http://www.sqlite.org/docs.html
+  home: http://www.sqlite.org/
+  license: Public-Domain (http://www.sqlite.org/copyright.html)
+  license_url: http://www.sqlite.org/copyright.html
+  summary: Implements a self-contained, zero-configuration, SQL database engine
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - jakirkham
+    - jjhelmus
+    - mingwandroid
+    - msarahan
+    - ocefpaf
+    - snorfalorpagus
+    - xylar
