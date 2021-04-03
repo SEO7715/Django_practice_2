@@ -1,2 +1,0 @@
-C:\Users\SEO JEONG\.conda\envs\askcompany
-C:\Users\SEO JEONG\.conda\envs\django-with-react-rev3
