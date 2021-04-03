@@ -1,0 +1,13 @@
+prefix=C:/Users/SEO JEONG/.conda/envs/django-with-react-rev2/Library
+exec_prefix=C:/Users/SEO JEONG/.conda/envs/django-with-react-rev2/Library
+libdir=C:/Users/SEO JEONG/.conda/envs/django-with-react-rev2/Library/lib
+sharedlibdir=C:/Users/SEO JEONG/.conda/envs/django-with-react-rev2/Library/lib
+includedir=C:/Users/SEO JEONG/.conda/envs/django-with-react-rev2/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.11
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
